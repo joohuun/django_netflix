@@ -49,12 +49,15 @@ def home(request):
         user = request.user
         user_like = list(user.like_articles.all())
         likes = {}
+        
+        
+        
         for like in user_like:
             genre = like.genre.all()
             likes[like] = genre
 
         # 평점 별 줄세우기
-        rate_ranking = MovieModel.objects.all().order_by('-rate')[:21]
+        rate_ranking = MovieModel.objects.all().order_by('-rate')[:31]
         ranking = {}
         rate_genres = []
         for rank in rate_ranking:

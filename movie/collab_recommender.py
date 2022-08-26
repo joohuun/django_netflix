@@ -5,6 +5,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from .models import  MovieModel
 import random
 
+
 connection = pymysql.connect(
     host='localhost',
     port=3306,
@@ -42,13 +43,12 @@ class Collab_recommender:
         # 1. 가장 비슷한 1명이 높은 평점을 준 영화 상위 20개 뽑기
         # 1번 유저와 가장 비슷한 유저를 뽑고,
         try:
-            similar_user = self.user_based_collab[user -
-                                                  1].sort_values(ascending=False)[:3].index[1]
+            similar_user = self.user_based_collab[user-1].sort_values(ascending=False)[:3].index[1]
             print(similar_user)
             # 그 유저가 좋아했던 영화를 평점 내림차순으로 출력
             print(self.ratings_matrix)
-            index = self.ratings_matrix.iloc[similar_user].sort_values(ascending=False)[
-                :20]
+            
+            index = self.ratings_matrix.iloc[similar_user].sort_values(ascending=False)[:20]
             #index = self.ratings_matrix.query(f"user_id == {similar_user}").sort_values(ascending=False, by=user, axis=1)
             print(list(index.index))
 
