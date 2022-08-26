@@ -29,6 +29,7 @@
 > - [코드 참조](https://github.com/joohuun/django_netflix/blob/caf1a1a16c722bb532e27a1729735e628db4138c/data_insert/movie_insert.py#L1)
 
 📌 ERD   
-
+-   
+![ERD_Netflix.png](/static/ERD_Netflix.png)
 
 
