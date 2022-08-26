@@ -23,8 +23,8 @@
 -   
 ### 1) 크롤링한 데이터 Dmup 하기  
 > - 에러: 크롤링한 데이터를 DB에 Dump하는 과정에서 에러 발생
-> - 원인: 
-> - 해결: 80번 포트에 도메인 등록 시켜주기.
+> - 원인: Data insert 하기 전에 전처리를 하지 않았다.
+> - 해결: Data 전처리하여 Json형식으로 변환
 > - [코드 참조](https://github.com/joohuun/Petrasche_back/blob/dfa374231cd39c9b53954e713b7d809d011a83aa/nginx/default.conf#L11)
 ### 2) 쿼리 최적화 진행   
 > - 문제점: DB가 쌓이다 보니 서버가 느려지는 현상 발생
