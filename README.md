@@ -16,7 +16,7 @@
 > - 유저 기반 협업필터링을 적용한 영화 추천 [[코드참조]](https://github.com/joohuun/django_netflix/blob/ad72b5da58e9cb07b6ec93a3b4834758d1b8556e/movie/collab_recommender.py#L1)   
 > - 영화제목, 배우를 키워드로한 검색 기능   
 ### 3. 디테일 페이지   
-> - 컨텐츠 기반 필터링을 적용한 영화 추천 
+> - 컨텐츠 기반 필터링을 적용한 영화 추천 [[코드참조]](https://github.com/joohuun/django_netflix/blob/main/movie/recommender_ml.py)   
 > - 줄거리, 장르를 벡터화 시킴  
 > - 댓글, 평점, 좋아요
 
